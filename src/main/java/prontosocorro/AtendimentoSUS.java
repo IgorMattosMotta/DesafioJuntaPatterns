@@ -1,12 +1,12 @@
 package prontosocorro;
 
-public class AtendimentoSUS implements IAtendimento {
+public class AtendimentoSUS extends Atendimento {
 
     public String iniciar() {
-        return "Atendimento SUS iniciado";
+        return "Atendimento SUS iniciado para " + getPaciente() + " com " + getMedicoResponsavel();
     }
 
     public String encerrar() {
-        return "Atendimento SUS encerrado";
+        return "Atendimento SUS encerrado. Medicamento prescrito: " + getMedicamentoPrescrito();
     }
 }
